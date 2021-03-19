@@ -9,10 +9,10 @@ namespace FootballScoreBoard
     public class ScoreBoard
     {
         // List of all matches.
-        public List<Match> CurrentMatches = new List<Match>();
+        private List<Match> CurrentMatches = new List<Match>();
 
         // List of all finished matches with total score.
-        public List<Match> FinishedMatches = new List<Match>();
+        private List<Match> FinishedMatches = new List<Match>();
 
 
 

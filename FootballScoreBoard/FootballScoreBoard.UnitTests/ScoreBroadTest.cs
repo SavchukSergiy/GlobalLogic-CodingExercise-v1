@@ -6,7 +6,7 @@ namespace FootballScoreBoard.UnitTests
     public class ScoreBroadTest
     {
         [TestMethod]
-        public void AddMatch_Match_MatchNotNull()
+        public void AddMatch_Match_AddToList()
         {
             // Arrange
             var board = new ScoreBoard();
@@ -20,7 +20,7 @@ namespace FootballScoreBoard.UnitTests
             board.AddMatch(match);
 
             // Assert
-            Assert.IsNotNull(match);
+            Assert.IsNotNull(board.GetCurrentMatches());
         }
     }
 }
