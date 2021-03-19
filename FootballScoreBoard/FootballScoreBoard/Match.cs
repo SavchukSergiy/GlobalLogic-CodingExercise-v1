@@ -8,6 +8,7 @@ namespace FootballScoreBoard
 {
     public class Match
     {
+        public int Id { get; set; }
         HomeTeam HomeTeam { get; set; }
         AwayTeam AwayTeam { get; set; }
 
