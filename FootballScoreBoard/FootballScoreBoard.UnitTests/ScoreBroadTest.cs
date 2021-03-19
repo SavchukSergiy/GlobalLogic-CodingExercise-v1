@@ -16,6 +16,8 @@ namespace FootballScoreBoard.UnitTests
             AwayT = new AwayTeam { Name = "team2", Country = "USA", Ñoach = "Cool man2", TeamScore = 0 };
 
             NewMatch = new Match(1, HomeT, AwayT);
+            Board.AddMatch(NewMatch);
+
         }
 
         [TestMethod]
@@ -25,7 +27,7 @@ namespace FootballScoreBoard.UnitTests
             createStartData();
 
             // Act
-            Board.AddMatch(NewMatch);
+            //Board.AddMatch(NewMatch);
 
             // Assert
             Assert.IsNotNull(Board.GetCurrentMatches());
@@ -39,8 +41,6 @@ namespace FootballScoreBoard.UnitTests
             createStartData();
 
             // Act
-            Board.AddMatch(NewMatch);
-
             var currentM = Board.GetCurrentMatches();
             var match = currentM.Find(item => item.Id == 1);
             short oldHomeTeamScore = match.HomeTeam.TeamScore;
@@ -60,7 +60,6 @@ namespace FootballScoreBoard.UnitTests
             createStartData();
 
             // Act
-            Board.AddMatch(NewMatch);
             Board.FinishMatch(1);
 
             // Assert

@@ -15,7 +15,6 @@ namespace FootballScoreBoard
         private List<Match> FinishedMatches = new List<Match>();
 
 
-
         // Add new match to the sroce broad.
         public void AddMatch(Match match) 
         {
@@ -27,7 +26,7 @@ namespace FootballScoreBoard
         // Finish match by Id.
         public void FinishMatch(int id)
         {
-            // Find match in list by id
+            // Find match in list by id.
             var match = CurrentMatches.Find(item => item.Id == id);
 
             if (match != null)
