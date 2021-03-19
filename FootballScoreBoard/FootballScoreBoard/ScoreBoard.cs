@@ -47,15 +47,6 @@ namespace FootballScoreBoard
 
                 CurrentMatches.Remove(match);
                 FinishedMatches.Add(match);
-
-                //foreach (var item in CurrentMatches)
-                //{
-                //    if (item.Id == id)
-                //    {
-                //        CurrentMatches.Remove(item);
-                //        FinishedMatches.Add(item);
-                //    }
-                //}
             }
         }
 
@@ -83,7 +74,11 @@ namespace FootballScoreBoard
         // Get a summary of games by total score.
         public List<Match> GetSummary()
         {
-            return null;
+            var summery = from m in FinishedMatches
+                             orderby m.TotalScore descending
+                             select m;
+
+            return summery.ToList();
         }
     }
 }
