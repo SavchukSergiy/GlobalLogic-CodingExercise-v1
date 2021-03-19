@@ -13,7 +13,7 @@ namespace FootballScoreBoard.UnitTests
             var homeTeam = new HomeTeam { Name = "team1", Country = "Ukraine", Ñoach = "Cool man", TeamScore = 0 };
             var awayTeam = new AwayTeam { Name = "team2", Country = "USA", Ñoach = "Cool man2", TeamScore = 0 };
 
-            var match = new Match(homeTeam, awayTeam);
+            var match = new Match(1, homeTeam, awayTeam);
 
             // Act
 

@@ -16,8 +16,9 @@ namespace FootballScoreBoard
 
         public int TotalScore = 0;
 
-        public Match(HomeTeam homeTeam, AwayTeam awayTeam)
+        public Match(int id, HomeTeam homeTeam, AwayTeam awayTeam)
         {
+            Id = id;
             HomeTeam = homeTeam;
             AwayTeam = awayTeam;
         }

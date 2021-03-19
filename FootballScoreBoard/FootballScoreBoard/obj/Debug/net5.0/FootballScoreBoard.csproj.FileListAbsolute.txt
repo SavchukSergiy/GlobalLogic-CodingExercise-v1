@@ -2,7 +2,6 @@ D:\Projects\GlobalLogic-CodingExercise-v1\FootballScoreBoard\FootballScoreBoard\
 D:\Projects\GlobalLogic-CodingExercise-v1\FootballScoreBoard\FootballScoreBoard\bin\Debug\net5.0\FootballScoreBoard.dll
 D:\Projects\GlobalLogic-CodingExercise-v1\FootballScoreBoard\FootballScoreBoard\bin\Debug\net5.0\ref\FootballScoreBoard.dll
 D:\Projects\GlobalLogic-CodingExercise-v1\FootballScoreBoard\FootballScoreBoard\bin\Debug\net5.0\FootballScoreBoard.pdb
-D:\Projects\GlobalLogic-CodingExercise-v1\FootballScoreBoard\FootballScoreBoard\obj\Debug\net5.0\FootballScoreBoard.csprojAssemblyReference.cache
 D:\Projects\GlobalLogic-CodingExercise-v1\FootballScoreBoard\FootballScoreBoard\obj\Debug\net5.0\FootballScoreBoard.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\GlobalLogic-CodingExercise-v1\FootballScoreBoard\FootballScoreBoard\obj\Debug\net5.0\FootballScoreBoard.AssemblyInfoInputs.cache
 D:\Projects\GlobalLogic-CodingExercise-v1\FootballScoreBoard\FootballScoreBoard\obj\Debug\net5.0\FootballScoreBoard.AssemblyInfo.cs
