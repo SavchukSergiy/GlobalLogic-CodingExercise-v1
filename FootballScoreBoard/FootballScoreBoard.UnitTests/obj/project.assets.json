@@ -1634,6 +1634,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "FootballScoreBoard/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/FootballScoreBoard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FootballScoreBoard.dll": {}
+        }
       }
     }
   },
@@ -5706,10 +5716,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "FootballScoreBoard/1.0.0": {
+      "type": "project",
+      "path": "../FootballScoreBoard/FootballScoreBoard.csproj",
+      "msbuildProject": "../FootballScoreBoard/FootballScoreBoard.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "FootballScoreBoard >= 1.0.0",
       "MSTest.TestAdapter >= 2.1.1",
       "MSTest.TestFramework >= 2.1.1",
       "Microsoft.NET.Test.Sdk >= 16.7.1",
@@ -5742,7 +5758,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\GlobalLogic-CodingExercise-v1\\FootballScoreBoard\\FootballScoreBoard\\FootballScoreBoard.csproj": {
+              "projectPath": "D:\\Projects\\GlobalLogic-CodingExercise-v1\\FootballScoreBoard\\FootballScoreBoard\\FootballScoreBoard.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
