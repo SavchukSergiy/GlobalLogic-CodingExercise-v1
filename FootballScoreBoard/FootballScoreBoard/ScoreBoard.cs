@@ -24,7 +24,7 @@ namespace FootballScoreBoard
         }
 
         // Update match score.
-        public void UpdateScore(Match match)
+        public void UpdateScore(Match match, short homeTeamScore, short awayTeamScore)
         {
             
         }
