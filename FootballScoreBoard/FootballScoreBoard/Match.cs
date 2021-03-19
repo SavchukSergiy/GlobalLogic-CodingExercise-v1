@@ -9,10 +9,12 @@ namespace FootballScoreBoard
     public class Match
     {
         public int Id { get; set; }
-        HomeTeam HomeTeam { get; set; }
-        AwayTeam AwayTeam { get; set; }
+        public HomeTeam HomeTeam { get; set; }
+        public AwayTeam AwayTeam { get; set; }
 
         public bool IsFinished { get; set; }
+
+        public int TotalScore = 0;
 
         public Match(HomeTeam homeTeam, AwayTeam awayTeam)
         {

@@ -14,6 +14,8 @@ namespace FootballScoreBoard
         // List of all finished matches with total score.
         public List<Match> FinishedMatches = new List<Match>();
 
+
+
         // Add new match to the sroce broad.
         public void AddMatch(Match match) 
         {
@@ -26,35 +28,59 @@ namespace FootballScoreBoard
         {
             if (match != null)
             {
+                match.TotalScore = match.HomeTeam.TeamScore + match.AwayTeam.TeamScore;
                 FinishedMatches.Add(match);
                 CurrentMatches.Remove(match);
             }
         }
 
-        // Finish match.
+        // Finish match by Id.
         public void FinishMatch(int id)
         {
+            // Find match in list by id
             var match = CurrentMatches.Find(item => item.Id == id);
-            CurrentMatches.Remove(match);
-            FinishedMatches.Add(match);
 
-            //foreach (var item in CurrentMatches)
-            //{
-            //    if (item.Id == id)
-            //    {
-            //        CurrentMatches.Remove(item);
-            //        FinishedMatches.Add(item);
-            //    }
-            //}
+            if (match != null)
+            {
+                // Calculate total score
+                match.TotalScore = match.HomeTeam.TeamScore + match.AwayTeam.TeamScore;
+
+                CurrentMatches.Remove(match);
+                FinishedMatches.Add(match);
+
+                //foreach (var item in CurrentMatches)
+                //{
+                //    if (item.Id == id)
+                //    {
+                //        CurrentMatches.Remove(item);
+                //        FinishedMatches.Add(item);
+                //    }
+                //}
+            }
         }
 
         // Update match score.
-        public void UpdateScore(Match match, short homeTeamScore, short awayTeamScore)
-        {
-            
+        public List<Match> UpdateScore(int matchId, short homeTeamScore, short awayTeamScore)
+        {  
+                foreach (var item in CurrentMatches)
+                {
+                    if (item.Id == matchId)
+                    {
+                        item.HomeTeam.TeamScore = homeTeamScore;
+                        item.AwayTeam.TeamScore = awayTeamScore;
+                    }
+                }  
+          
+            return CurrentMatches;
         }
 
-        // Get a summary of games by total score (sorted).
+        // Get a current matches.
+        public List<Match> GetCurrentMatches()
+        {
+            return CurrentMatches;
+        }
+
+        // Get a summary of games by total score.
         public List<Match> GetSummary()
         {
             return null;
