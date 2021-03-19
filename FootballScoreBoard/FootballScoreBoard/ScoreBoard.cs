@@ -32,9 +32,7 @@ namespace FootballScoreBoard
 
             if (match != null)
             {
-                // Calculate total score
-                match.TotalScore = match.HomeTeam.TeamScore + match.AwayTeam.TeamScore;
-                
+                match.CalculateTotalScore();
                 FinishedMatches.Add(match);
                 CurrentMatches.Remove(match);
             }

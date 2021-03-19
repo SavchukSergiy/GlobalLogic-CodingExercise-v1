@@ -12,8 +12,6 @@ namespace FootballScoreBoard
         public HomeTeam HomeTeam { get; set; }
         public AwayTeam AwayTeam { get; set; }
 
-        public bool IsFinished { get; set; }
-
         public int TotalScore = 0;
 
         public Match(int id, HomeTeam homeTeam, AwayTeam awayTeam)
@@ -23,12 +21,18 @@ namespace FootballScoreBoard
             AwayTeam = awayTeam;
         }
 
-        // Get match score
-        public string GetScore()
+        // Get match score.
+        public string GetScoreString()
         {
             string score = HomeTeam.TeamScore.ToString() + " : " + AwayTeam.TeamScore.ToString();
 
             return score;
+        }
+
+        // Calculate total score.
+        public void CalculateTotalScore()
+        {
+            TotalScore = HomeTeam.TeamScore + AwayTeam.TeamScore;
         }
     }
 }
