@@ -36,13 +36,14 @@ namespace FootballScoreBoard
                 match.TotalScore = match.HomeTeam.TeamScore + match.AwayTeam.TeamScore;
 
                 CurrentMatches.Remove(match);
+                
                 FinishedMatches.Add(match);
             }
         }
 
 
         // Update match score.
-        public List<Match> UpdateScore(int matchId, short homeTeamScore, short awayTeamScore)
+        public void UpdateScore(int matchId, short homeTeamScore, short awayTeamScore)
         {  
                 foreach (var item in CurrentMatches)
                 {
@@ -52,8 +53,6 @@ namespace FootballScoreBoard
                         item.AwayTeam.TeamScore = awayTeamScore;
                     }
                 }  
-          
-            return CurrentMatches;
         }
 
         // Get a current matches.
