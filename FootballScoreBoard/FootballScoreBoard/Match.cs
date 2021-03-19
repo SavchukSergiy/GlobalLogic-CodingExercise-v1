@@ -11,10 +11,7 @@ namespace FootballScoreBoard
         Team HomeTeam { get; set; }
         Team AwayTeam { get; set; }
 
-        short HomeTeamScore { get; set; }
-        short AwayTeamScore{get;set;}
-
-        public Match(Team homeTeam, Team awayTeam,  short homeTeamScore = 0, short awayTeamScore = 0)
+        public Match(HomeTeam homeTeam, AwayTeam awayTeam)
         {
             HomeTeam = homeTeam;
             AwayTeam = awayTeam;
