@@ -23,16 +23,6 @@ namespace FootballScoreBoard
                 CurrentMatches.Add(match);
         }
 
-        // Finish match.
-        public void FinishMatch(Match match)
-        {
-            if (match != null)
-            {
-                match.TotalScore = match.HomeTeam.TeamScore + match.AwayTeam.TeamScore;
-                FinishedMatches.Add(match);
-                CurrentMatches.Remove(match);
-            }
-        }
 
         // Finish match by Id.
         public void FinishMatch(int id)
@@ -49,6 +39,7 @@ namespace FootballScoreBoard
                 FinishedMatches.Add(match);
             }
         }
+
 
         // Update match score.
         public List<Match> UpdateScore(int matchId, short homeTeamScore, short awayTeamScore)
