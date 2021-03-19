@@ -8,6 +8,6 @@ namespace FootballScoreBoard
 {
     public class HomeTeam : Team
     {
-        short TeamScore { get; set; }
+       public short TeamScore { get; set; }
     }
 }

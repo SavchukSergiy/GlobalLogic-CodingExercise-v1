@@ -8,13 +8,21 @@ namespace FootballScoreBoard
 {
     public class Match
     {
-        Team HomeTeam { get; set; }
-        Team AwayTeam { get; set; }
+        HomeTeam HomeTeam { get; set; }
+        AwayTeam AwayTeam { get; set; }
 
         public Match(HomeTeam homeTeam, AwayTeam awayTeam)
         {
             HomeTeam = homeTeam;
             AwayTeam = awayTeam;
+        }
+
+        // Get match score
+        public string GetScore()
+        {
+            string score = HomeTeam.TeamScore.ToString() + " : " + AwayTeam.TeamScore.ToString();
+
+            return score;
         }
     }
 }
