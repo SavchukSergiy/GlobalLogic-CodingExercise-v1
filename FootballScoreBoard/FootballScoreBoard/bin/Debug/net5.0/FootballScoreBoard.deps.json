@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "FootballScoreBoard/1.0.0": {
+        "runtime": {
+          "FootballScoreBoard.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FootballScoreBoard/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

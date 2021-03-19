@@ -34,10 +34,9 @@ namespace FootballScoreBoard
             {
                 // Calculate total score
                 match.TotalScore = match.HomeTeam.TeamScore + match.AwayTeam.TeamScore;
-
-                CurrentMatches.Remove(match);
                 
                 FinishedMatches.Add(match);
+                CurrentMatches.Remove(match);
             }
         }
 
