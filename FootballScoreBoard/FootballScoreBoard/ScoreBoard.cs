@@ -14,13 +14,13 @@ namespace FootballScoreBoard
         // Add new match to the sroce broad.
         public void AddMatch(Match match) 
         {
-           
+            if (match != null)
+                Matches.Add(match);
         }
 
         // Finish match.
         public void FinishMatch(Match match)
-        {
-            
+        {   
         }
 
         // Update match score.

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FootballScoreBoard
 {
-    public class Team
+    public abstract class Team
     {
         public string Name { get; set; }
         public string Country { get; set; }
