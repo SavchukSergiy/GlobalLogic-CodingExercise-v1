@@ -11,6 +11,8 @@ namespace FootballScoreBoard
         HomeTeam HomeTeam { get; set; }
         AwayTeam AwayTeam { get; set; }
 
+        public bool IsFinished { get; set; }
+
         public Match(HomeTeam homeTeam, AwayTeam awayTeam)
         {
             HomeTeam = homeTeam;
