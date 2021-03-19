@@ -12,13 +12,13 @@ namespace FootballScoreBoard
         public List<Match> Matches = new List<Match>();
 
         // Add new match to the sroce broad.
-        public Match Add() 
+        public void AddMatch(Match match) 
         {
-            return null;
+           
         }
 
         // Finish match.
-        public void Finish()
+        public void FinishMatch(Match match)
         {
             
         }
@@ -29,7 +29,7 @@ namespace FootballScoreBoard
             
         }
 
-        // Get a summary of games by total score.
+        // Get a summary of games by total score (sorted).
         public List<Match> GetSummary()
         {
             return null;
