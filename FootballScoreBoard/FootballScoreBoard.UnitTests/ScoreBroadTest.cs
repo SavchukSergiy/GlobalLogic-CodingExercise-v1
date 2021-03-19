@@ -5,22 +5,68 @@ namespace FootballScoreBoard.UnitTests
     [TestClass]
     public class ScoreBroadTest
     {
+        ScoreBoard Board;
+        HomeTeam HomeT;
+        AwayTeam AwayT;
+        Match NewMatch;
+        private void createStartData()
+        {
+            Board = new ScoreBoard();
+            HomeT = new HomeTeam { Name = "team1", Country = "Ukraine", Ñoach = "Cool man", TeamScore = 0 };
+            AwayT = new AwayTeam { Name = "team2", Country = "USA", Ñoach = "Cool man2", TeamScore = 0 };
+
+            NewMatch = new Match(1, HomeT, AwayT);
+        }
+
         [TestMethod]
         public void AddMatch_Match_AddToList()
         {
             // Arrange
-            var board = new ScoreBoard();
-            var homeTeam = new HomeTeam { Name = "team1", Country = "Ukraine", Ñoach = "Cool man", TeamScore = 0 };
-            var awayTeam = new AwayTeam { Name = "team2", Country = "USA", Ñoach = "Cool man2", TeamScore = 0 };
-
-            var match = new Match(1, homeTeam, awayTeam);
+            createStartData();
 
             // Act
-
-            board.AddMatch(match);
+            Board.AddMatch(NewMatch);
 
             // Assert
-            Assert.IsNotNull(board.GetCurrentMatches());
+            Assert.IsNotNull(Board.GetCurrentMatches());
+        }
+
+
+        [TestMethod]
+        public void UpdateMatch_Match_Update()
+        {
+            // Arrange
+            createStartData();
+
+            // Act
+            Board.AddMatch(NewMatch);
+
+            var currentM = Board.GetCurrentMatches();
+            var match = currentM.Find(item => item.Id == 1);
+            short oldHomeTeamScore = match.HomeTeam.TeamScore;
+
+            Board.UpdateScore(1, 5, 2);
+
+            short newHomeTeamScore = match.HomeTeam.TeamScore;
+
+            // Assert
+            Assert.AreNotEqual(oldHomeTeamScore, newHomeTeamScore);
+        }
+
+        [TestMethod]
+        public void FinishMatch_Match_Finish()
+        {
+            // Arrange
+            createStartData();
+
+            // Act
+            Board.AddMatch(NewMatch);
+            Board.FinishMatch(1);
+
+            // Assert
+            var currentM = Board.GetCurrentMatches();
+            
+            Assert.IsNull(currentM.Find(item => item.Id == 1));
         }
     }
 }
