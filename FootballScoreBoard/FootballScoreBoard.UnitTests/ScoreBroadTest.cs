@@ -6,14 +6,14 @@ namespace FootballScoreBoard.UnitTests
     public class ScoreBroadTest
     {
         ScoreBoard Board;
-        HomeTeam HomeT;
-        AwayTeam AwayT;
+        TeamInMatch HomeT;
+        TeamInMatch AwayT;
         Match NewMatch;
         private void createStartData()
         {
             Board = new ScoreBoard();
-            HomeT = new HomeTeam { Name = "team1", Country = "Ukraine", Ñoach = "Cool man", TeamScore = 0 };
-            AwayT = new AwayTeam { Name = "team2", Country = "USA", Ñoach = "Cool man2", TeamScore = 0 };
+            HomeT = new TeamInMatch { Name = "team1", Country = "Ukraine", Ñoach = "Cool man", TeamScore = 0 };
+            AwayT = new TeamInMatch { Name = "team2", Country = "USA", Ñoach = "Cool man2", TeamScore = 0 };
 
             NewMatch = new Match(1, HomeT, AwayT);
             Board.AddMatch(NewMatch);

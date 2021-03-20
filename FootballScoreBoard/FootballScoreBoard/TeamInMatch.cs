@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace FootballScoreBoard
 {
-    public class HomeTeam : Team
+    public class TeamInMatch : Team
     {
-       public short TeamScore { get; set; }
+        public short TeamScore { get; set; }
     }
 }
